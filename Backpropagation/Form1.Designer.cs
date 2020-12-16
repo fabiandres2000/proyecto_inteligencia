@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.graficaErroriteracion = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnCargarmatriz = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -82,36 +82,36 @@
             // graficaErroriteracion
             // 
             this.graficaErroriteracion.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea3.Name = "ChartArea1";
-            this.graficaErroriteracion.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Name = "Legend1";
-            this.graficaErroriteracion.Legends.Add(legend3);
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.Name = "ChartArea1";
+            this.graficaErroriteracion.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.graficaErroriteracion.Legends.Add(legend1);
             this.graficaErroriteracion.Location = new System.Drawing.Point(1054, 343);
             this.graficaErroriteracion.Name = "graficaErroriteracion";
             this.graficaErroriteracion.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Color = System.Drawing.Color.Blue;
-            series3.Legend = "Legend1";
-            series3.Name = "Error por Iteracion";
-            this.graficaErroriteracion.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Blue;
+            series1.Legend = "Legend1";
+            series1.Name = "Error por Iteracion";
+            this.graficaErroriteracion.Series.Add(series1);
             this.graficaErroriteracion.Size = new System.Drawing.Size(268, 276);
             this.graficaErroriteracion.TabIndex = 10;
             this.graficaErroriteracion.Text = "chart1";
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            title3.Name = "Title1";
-            title3.Text = "Grafico RMS vs Iteracion";
-            this.graficaErroriteracion.Titles.Add(title3);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            title1.Name = "Title1";
+            title1.Text = "Grafico RMS vs Iteracion";
+            this.graficaErroriteracion.Titles.Add(title1);
             // 
             // btnCargarmatriz
             // 
-            this.btnCargarmatriz.Location = new System.Drawing.Point(19, 16);
+            this.btnCargarmatriz.BackgroundImage = global::Backpropagation.Properties.Resources.subir1;
+            this.btnCargarmatriz.Location = new System.Drawing.Point(44, 16);
             this.btnCargarmatriz.Name = "btnCargarmatriz";
-            this.btnCargarmatriz.Size = new System.Drawing.Size(233, 27);
+            this.btnCargarmatriz.Size = new System.Drawing.Size(178, 38);
             this.btnCargarmatriz.TabIndex = 25;
-            this.btnCargarmatriz.Text = "CARGAR DATOS";
             this.btnCargarmatriz.UseVisualStyleBackColor = true;
             this.btnCargarmatriz.Click += new System.EventHandler(this.btnCargarmatriz_Click);
             // 
@@ -145,9 +145,9 @@
             this.groupBox2.Controls.Add(this.lblSalidas);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.lblEntradas);
-            this.groupBox2.Location = new System.Drawing.Point(11, 51);
+            this.groupBox2.Location = new System.Drawing.Point(11, 63);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(246, 137);
+            this.groupBox2.Size = new System.Drawing.Size(246, 120);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion del DataSet";
@@ -211,23 +211,23 @@
             // 
             // btnSimular
             // 
+            this.btnSimular.BackgroundImage = global::Backpropagation.Properties.Resources.simular;
             this.btnSimular.Enabled = false;
-            this.btnSimular.Location = new System.Drawing.Point(19, 195);
+            this.btnSimular.Location = new System.Drawing.Point(44, 187);
             this.btnSimular.Name = "btnSimular";
-            this.btnSimular.Size = new System.Drawing.Size(233, 31);
+            this.btnSimular.Size = new System.Drawing.Size(178, 43);
             this.btnSimular.TabIndex = 31;
-            this.btnSimular.Text = "SIMULAR RED";
             this.btnSimular.UseVisualStyleBackColor = true;
             this.btnSimular.Click += new System.EventHandler(this.btnSimular_Click);
             // 
             // btnInicializarred
             // 
+            this.btnInicializarred.BackgroundImage = global::Backpropagation.Properties.Resources.inicializar;
             this.btnInicializarred.Enabled = false;
-            this.btnInicializarred.Location = new System.Drawing.Point(636, 296);
+            this.btnInicializarred.Location = new System.Drawing.Point(592, 292);
             this.btnInicializarred.Name = "btnInicializarred";
-            this.btnInicializarred.Size = new System.Drawing.Size(168, 28);
+            this.btnInicializarred.Size = new System.Drawing.Size(221, 40);
             this.btnInicializarred.TabIndex = 27;
-            this.btnInicializarred.Text = "INICIALIZAR RED";
             this.btnInicializarred.UseVisualStyleBackColor = true;
             this.btnInicializarred.Click += new System.EventHandler(this.btnInicializarred_Click);
             // 
@@ -310,7 +310,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.nudErrormaximopermitido);
-            this.groupBox5.Location = new System.Drawing.Point(28, 115);
+            this.groupBox5.Location = new System.Drawing.Point(28, 112);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(240, 60);
             this.groupBox5.TabIndex = 2;
@@ -349,7 +349,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.nudRataaprendizaje);
-            this.groupBox6.Location = new System.Drawing.Point(28, 187);
+            this.groupBox6.Location = new System.Drawing.Point(28, 182);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(240, 56);
             this.groupBox6.TabIndex = 3;
@@ -387,13 +387,13 @@
             // 
             // btnEntrenarlared
             // 
+            this.btnEntrenarlared.BackgroundImage = global::Backpropagation.Properties.Resources.entrenar;
             this.btnEntrenarlared.Enabled = false;
             this.btnEntrenarlared.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrenarlared.Location = new System.Drawing.Point(70, 290);
+            this.btnEntrenarlared.Location = new System.Drawing.Point(82, 243);
             this.btnEntrenarlared.Name = "btnEntrenarlared";
-            this.btnEntrenarlared.Size = new System.Drawing.Size(139, 36);
+            this.btnEntrenarlared.Size = new System.Drawing.Size(133, 98);
             this.btnEntrenarlared.TabIndex = 4;
-            this.btnEntrenarlared.Text = "ENTRENAR LA RED";
             this.btnEntrenarlared.UseVisualStyleBackColor = true;
             this.btnEntrenarlared.Click += new System.EventHandler(this.btnEntrenarlared_Click);
             // 
@@ -413,7 +413,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(227, 343);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(810, 343);
+            this.groupBox3.Size = new System.Drawing.Size(821, 348);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parametros de entrenamiento";
@@ -448,7 +448,7 @@
             "Tangente hiperbólica."});
             this.comboBox1.Location = new System.Drawing.Point(465, 296);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 28);
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 35;
             // 
             // nudCapasocultas

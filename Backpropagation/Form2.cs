@@ -121,8 +121,19 @@ namespace Perceptronsimple
                 diccionariodelassalidasdecapa.Add(cp, arraydesalidadelacapaactual);
             }
             string resultadodediagnostico = new Binarioacaracteres(binariodesalida).ConvertirDeBinarioACadenaDeCaracteres().ToUpper();
-            MessageBox.Show("El diagnostico obtenido mediante la tecnología es que usted padece de: " + resultadodediagnostico, "Diagnostico inteligente.");
-            label4.Text = resultadodediagnostico;
+            Packages pack = new Packages();
+            
+            if (pack.verify(resultadodediagnostico)==true)
+            {
+                MessageBox.Show("El diagnostico obtenido mediante la tecnología es que usted padece de: " + resultadodediagnostico, "Diagnostico inteligente.");
+                label4.Text = resultadodediagnostico;
+            }
+            else
+            {
+                MessageBox.Show("No coincide con ninguno de los patrones presentados para el entrenamiento");
+                label4.Text = binariodesalida;
+            }
+           
         }
     }
 }

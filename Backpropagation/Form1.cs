@@ -114,6 +114,16 @@ namespace pruebaRed
                 arraydenumerosmayoresporcolumnasdeentradas = new float[entradas];
                 arraydenumerosmenoresporcolumnasdeentradas = new float[entradas];
                 registros.RemoveAt(0);//Removemos el primer registro que vendría siendo la cabecera.
+                //mostramos el mensaje de espera
+                Barra_espera espera = new Barra_espera();
+                espera.Show();
+                int times = 400;
+                while (times > 0)
+                {
+                    Application.DoEvents();
+                    Thread.Sleep(1);
+                    times--;
+                }
                 for (int i = 0; i < entradas; i++)//Creamos las columnas de entradas.
                 {
                     string titulo = "Xr" + (i + 1);
@@ -124,6 +134,7 @@ namespace pruebaRed
                     string titulo = "Yr" + (i + 1);
                     grilladedatos.Columns.Add("Yr", titulo);
                 }
+              
                 int _i = 0;
                 foreach (string registro in registros)//Lleno la grila de datos y las matrices de entradas y salidas.
                 {
@@ -142,7 +153,7 @@ namespace pruebaRed
                 }
                 grilladedatos.AllowUserToAddRows = false;
                 NormalizarEntradasDeLaRed();
-                MessageBox.Show("Se han procesado los audios y generados en números reales.", "Audios cargados y procesados.");
+                MessageBox.Show("Se han procesado los audios y se paso la señal a reales.", "Atencion!");
                 nudCapasocultas.Enabled = true;
                 nudCapasocultasactivado();
                 comboBox1.Enabled = true;

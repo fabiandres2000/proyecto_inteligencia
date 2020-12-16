@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barra_espera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barra_espera.Designer.cs">
+      <DependentUpon>Barra_espera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Binarioacaracteres.cs" />
     <Compile Include="Caracteresabinario.cs" />
     <Compile Include="Form1.cs">
@@ -99,8 +105,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Packages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Barra_espera.resx">
+      <DependentUpon>Barra_espera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +190,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FONDO_FORM13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrenar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicializar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procesar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
