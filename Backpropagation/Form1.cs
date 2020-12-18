@@ -353,6 +353,17 @@ namespace pruebaRed
             iteracion = iteracion + Convert.ToInt32(nudIteraciones.Value);
             ratadeaprendizaje = float.Parse(nudRataaprendizaje.Value.ToString());
             errormaximopermitido = float.Parse(nudErrormaximopermitido.Value.ToString());
+            //guardo error en archivo
+            string path = @"c:\error_red.txt";
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine(errormaximopermitido);
+                }
+            }
+            ///////////////////////////////////////
+
             errordeiteracion = 1000;
             while (errormaximopermitido < errordeiteracion && conti <= iteracion)
             {

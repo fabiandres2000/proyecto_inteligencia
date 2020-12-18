@@ -4,6 +4,7 @@ using NUnit.Framework;
 using Perceptronmulticapas;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Perceptronsimple
@@ -123,10 +124,22 @@ namespace Perceptronsimple
             string resultadodediagnostico = new Binarioacaracteres(binariodesalida).ConvertirDeBinarioACadenaDeCaracteres().ToUpper();
             Packages pack = new Packages();
             
-            if (pack.verify(resultadodediagnostico)==true)
+            if (pack.verify(resultadodediagnostico)==false)
             {
                 MessageBox.Show("El diagnostico obtenido mediante la tecnología es que usted padece de: " + resultadodediagnostico, "Diagnostico inteligente.");
                 label4.Text = resultadodediagnostico;
+                // Open the file to read from.
+                string path = @"c:\error_red.txt";
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    string s = "";
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s);
+                        double error  = Convert.ToDouble(s)*100;
+                        MessageBox.Show("Tener en cuenta que la red tiene un error de: "+error+"%");
+                    }
+                }
             }
             else
             {
